@@ -4,8 +4,14 @@ jobs:
     docker:
       - image: alpine:3.7
     steps:
+      - checckout
       - run:
           name: The First Step
           command: |
             echo 'Hello Circleci!'
             echo 'This is the delivery pipeline'
+      - run:
+          name: Code is here
+          command: |
+               ls -l
+            echo ' Looks similar'
